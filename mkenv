@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ "$#" -lt 1 ]
+then
+ echo ""
+ echo "Usage mkenv <venv_name>"
+ echo ""
+ exit 0
+fi 
+
+echo "Creating virtual environment..."
+echo ""
+virtualenv `pwd`/${1}
+echo ""
+echo "alias ${1}='source `pwd`/${1}/bin/activate'" >> ~/.bash_aliases
+
+echo "Finished creating virtual environment..."
+echo "Source .bashrc to use virtual environment"
