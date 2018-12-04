@@ -8,11 +8,16 @@ then
  exit 0
 fi 
 
+venv=$1 
+
 echo "Creating virtual environment..."
 echo ""
-virtualenv `pwd`/${1}
+virtualenv `pwd`/${venv}
 echo ""
-echo "alias ${1}='source `pwd`/${1}/bin/activate'" >> ~/.bash_aliases
+echo "Adding ${venv} to ~/.bash_aliases"
+echo "alias ${venv}='source `pwd`/${venv}/bin/activate'" >> ~/.bash_aliases
 
+echo ""
 echo "Finished creating virtual environment..."
 echo "Source .bashrc to use virtual environment"
+echo ""
