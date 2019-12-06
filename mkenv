@@ -12,10 +12,10 @@ venv=$1
 
 echo "Creating virtual environment..."
 echo ""
-virtualenv `pwd`/${venv}
+virtualenv `pwd`/.${venv}
 echo ""
 echo "Adding ${venv} to ~/.bash_aliases"
-echo "alias ${venv}='source `pwd`/${venv}/bin/activate'" >> ~/.bash_aliases
+echo "alias ${venv}='source `pwd`/.${venv}/bin/activate'" >> ~/.bash_aliases
 
 echo ""
 echo "Finished creating virtual environment..."
